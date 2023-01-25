@@ -1,8 +1,7 @@
-.bg-img {
-    background-image: url('pixel-hills-background.png');
+.bg-image {
+    background-image: url('media/pixel-hills-background.png');
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
 h1 {
