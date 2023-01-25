@@ -17,5 +17,7 @@ button.addEventListener("click", () => {
     const randomEgg = Math.floor(Math.random() * eggs.length);
     egg.src = eggs[randomEgg];
     button.style.display = "none";
+    document.getElementById("name").style.display = "block";
+    document.getElementById("name-label").style.display = "block";
     bckgrndImage.style.backgroundImage = `url(${bckgrndImage})`
 })
