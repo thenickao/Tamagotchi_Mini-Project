@@ -8,37 +8,37 @@
     <script src="./js/script.js" defer></script>
     <title>Tamagotchi Mini-Project</title>
 </head>
-<body class="bg-image">
+<body>
 
     <h1 id="welcomeText">Welcome to Tamagotchi Land!</h1>
-
     <h1 id="incubationText">Time to Hatch your Egg</h1>
 
     <h2 id="generatorText">- click below to randomly generate your egg -</h2>
-
     <h2 id="nameOutput"></h2>
+    <h2 id="hatchedText"></h2>
 
     <button id="egg-picker-clicker">Give Me a Personal Egg</button>
 
+    <h3 id="eggStatusBar">Incubation Period</h3>
+    <div id="eggBar"></div>
+    <button id="incubateButton">Force Incubation</button>
+
     <img id="myEggs" src="">
-
-    <div class="statusBars">
+    <img class="creature" id="blueCreature" src="media/Creatures/blue_creature.png">
+    <img class="creature" id="greenCreature" src="media/Creatures/green_creature.png">
+    <img class="creature" id="redCreature" src="media/Creatures/red_creature.png">
     
-        <h3 id="warmthText">Warmth</h3>
-        <div id="statusBar1"></div>
-        <button id="warmthButton">Give Warmth</button>
+    <h3 class="tamaText tama" id="happinessText">Happiness</h3>
+    <div class="tamaBar tama" id="statusBar1"></div>
+    <button class="tamaButton tama" id="singButton">Sing to Me</button>
 
+    <h3 class="tamaText tama" id="fullnessText">Fullness</h3>
+    <div class="tamaBar tama" id="statusBar2"></div>
+    <button class="tamaButton tama" id="feedButton">Feed Me</button>
 
-        <h3 id="happinessText">Happiness</h3>
-        <div id="statusBar2"></div>
-        <button id="singButton">Sing a Lullaby</button>
-
-        <h3 id="humidityText">Humidity</h3>
-        <div id="statusBar3"></div>
-        <button id="pumpButton">Pump the Humidifier</button>
-    
-    </div>
-
+    <h3 class="tamaText tama" id="boredomText">Boredom</h3>
+    <div class="tamaBar tama" id="statusBar3"></div>
+    <button class="tamaButton tama" id="playButton">Play with Me</button>
 
 </body>
 </html>
