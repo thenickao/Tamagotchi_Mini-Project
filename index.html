@@ -9,11 +9,36 @@
     <title>Tamagotchi Mini-Project</title>
 </head>
 <body class="bg-image">
-    <h1>Hello, Welcome to Tamagotchi Land!</h1>
-    <h2>- click below to randomly generate your egg -</h2>
-    <label for="name" id="name-label" style="display: none">Name:</label>
-    <input type="text" id="name" name="name" style="display: none">
-    <button id="egg-picker-clicker">Give Me a Personal Egg!</button>
+
+    <h1 id="welcomeText">Welcome to Tamagotchi Land!</h1>
+
+    <h1 id="incubationText">Time to Hatch your Egg</h1>
+
+    <h2 id="generatorText">- click below to randomly generate your egg -</h2>
+
+    <h2 id="nameOutput"></h2>
+
+    <button id="egg-picker-clicker">Give Me a Personal Egg</button>
+
     <img id="myEggs" src="">
+
+    <div class="statusBars">
+    
+        <h3 id="warmthText">Warmth</h3>
+        <div id="statusBar1"></div>
+        <button id="warmthButton">Give Warmth</button>
+
+
+        <h3 id="happinessText">Happiness</h3>
+        <div id="statusBar2"></div>
+        <button id="singButton">Sing a Lullaby</button>
+
+        <h3 id="humidityText">Humidity</h3>
+        <div id="statusBar3"></div>
+        <button id="pumpButton">Pump the Humidifier</button>
+    
+    </div>
+
+
 </body>
 </html>

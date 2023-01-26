@@ -8,6 +8,10 @@ h1 {
     text-align: center;
  }
 
+#incubationText {
+    display: none
+}
+
 h2 {
     text-align: center;
 }
@@ -22,7 +26,7 @@ input {
     margin: auto;
 }
 
-button {
+#egg-picker-clicker {
     display: block;
     margin: auto;
 }
@@ -31,4 +35,26 @@ img {
     display: block;
     margin: auto;
     width: 100px;
+    padding: 5%;
 }
+
+#statusBar1, #statusBar2, #statusBar3 {
+    display: block;
+    width: 100px;
+    height: 20px;
+    background-color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* #statusBar2 {
+    width: 100px;
+    height: 20px;
+    background-color: black;
+}
+
+#statusBar3 {
+    width: 100px;
+    height: 20px;
+    background-color: black;
+} */
