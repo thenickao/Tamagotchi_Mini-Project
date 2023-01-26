@@ -77,6 +77,7 @@ let eggBarInterval = setInterval(() => {
         if (egg.src.endsWith("blue_egg.png")) {
             egg.style.display = "none";
             blueCreature.style.display = "block";
+            blueCreature.style.animation = "bounce 1s infinite"
             alert("Your egg has hatched!");
             eggStatusBar.style.display = "none";
             hatched.style.display = "block";
@@ -88,7 +89,7 @@ let eggBarInterval = setInterval(() => {
             function increaseAge() {
                 age += 1;
                 ageDisplay.innerHTML = "Age: " + age;
-                setTimeout(increaseAge, 5000)
+                setTimeout(increaseAge, 2500)
             }
             increaseAge()
             
@@ -118,6 +119,7 @@ let eggBarInterval = setInterval(() => {
         } else if (egg.src.endsWith("green_egg.png")) {
             egg.style.display = "none";
             greenCreature.style.display = "block";
+            greenCreature.style.animation = "bounce 1s infinite"
             alert("Your egg has hatched!");
             eggStatusBar.style.display = "none";
             hatched.style.display = "block";
@@ -130,7 +132,7 @@ let eggBarInterval = setInterval(() => {
             function increaseAge() {
                 age += 1;
                 ageDisplay.innerHTML = "Age: " + age;
-                setTimeout(increaseAge, 5000)
+                setTimeout(increaseAge, 2500)
             }
             increaseAge()
             happinessTx.style.display = "block"
@@ -159,6 +161,7 @@ let eggBarInterval = setInterval(() => {
         } else if (egg.src.endsWith("red_egg.png")) {
             egg.style.display = "none";
             redCreature.style.display = "block";
+            redCreature.style.animation = "bounce 1s infinite"
             alert("Your egg has hatched!");
             eggStatusBar.style.display = "none";
             hatched.style.display = "block";
@@ -171,7 +174,7 @@ let eggBarInterval = setInterval(() => {
             function increaseAge() {
                 age += 1;
                 ageDisplay.innerHTML = "Age: " + age;
-                setTimeout(increaseAge, 1000)
+                setTimeout(increaseAge, 2500)
             }
             increaseAge()
             happinessTx.style.display = "block"
@@ -204,7 +207,19 @@ let eggBarInterval = setInterval(() => {
 let bar1Interval = setInterval(() => {
     barWidth1 -= 1;
     bar1.style.width = barWidth1 + "px";
+    // if(age == 10 && (barWidth1 >= 60 || barWidth2 >= 60|| barWidth3 <= 40)) {
+    //     alert("Congratulations! Your Tamagotchi reach full maturity!")
+    // } else if(age == 10 && (barWidth1 < 60 || barWidth2 < 60 || barWidth3 > 40)) {
+    //     blueCreature.style.animationPlayState = "paused"
+    //     greenCreature.style.animationPlayState = "paused"
+    //     redCreature.style.animationPlayState = "paused"
+    //     alert("Oh no! Your Tamagotchi failed to reach full maturity and has died.")
+    // } else
     if(barWidth1 <= 0) {
+        blueCreature.style.animationPlayState = "paused"
+        greenCreature.style.animationPlayState = "paused"
+        redCreature.style.animationPlayState = "paused"
+        alert("Oh no! Your Tamagotchi has died due to gross neglicence and depression.")
         clearInterval(bar1Interval)
     }
 }, 250)
@@ -212,7 +227,19 @@ let bar1Interval = setInterval(() => {
 let bar2Interval = setInterval(() => {
     barWidth2 -= 1;
     bar2.style.width = barWidth2 + "px";
+    // if(age == 10 && (barWidth1 >= 60 || barWidth2 >= 60|| barWidth3 <= 40)) {
+    //     alert("Congratulations! Your Tamagotchi reach full maturity!")
+    // } else if(age == 10 && (barWidth1 < 60 || barWidth2 < 60 || barWidth3 > 40)) {
+    //     blueCreature.style.animationPlayState = "paused"
+    //     greenCreature.style.animationPlayState = "paused"
+    //     redCreature.style.animationPlayState = "paused"
+    //     alert("Oh no! Your Tamagotchi failed to reach full maturity and has died.")
+    // } else
     if(barWidth2 <= 0) {
+        blueCreature.style.animationPlayState = "paused"
+        greenCreature.style.animationPlayState = "paused"
+        redCreature.style.animationPlayState = "paused"
+        alert("Oh no! Your Tamagotchi has died due to gross neglicence and starvation.")
         clearInterval(bar2Interval)
     }
 }, 250)
@@ -220,15 +247,19 @@ let bar2Interval = setInterval(() => {
 let bar3Interval = setInterval(() => {
     barWidth3 += 1;
     bar3.style.width = barWidth3 + "px";
-    if(barWidth3 >= 100) {
+    // if(age == 10 && (barWidth1 >= 60 || barWidth2 >= 60|| barWidth3 <= 40)) {
+    //     alert("Congratulations! Your Tamagotchi reach full maturity!")
+    // } else if(age == 10 && (barWidth1 < 60 || barWidth2 < 60 || barWidth3 > 40)) {
+    //     blueCreature.style.animationPlayState = "paused"
+    //     greenCreature.style.animationPlayState = "paused"
+    //     redCreature.style.animationPlayState = "paused"
+    //     alert("Oh no! Your Tamagotchi failed to reach full maturity and has died.")
+    // } else
+    if (barWidth3 >= 100) {
+        blueCreature.style.animationPlayState = "paused"
+        greenCreature.style.animationPlayState = "paused"
+        redCreature.style.animationPlayState = "paused"
+        alert("Oh no! Your Tamagotchi has died due to gross neglicence and boredom.")
         clearInterval(bar3Interval)
     }
 }, 250)
-
-let result = function () {
-    if(age === 10 && barWidth1 >= 70 && barWidth2 >= 70 && barWidth3 <= 30) {
-        alert("Congratulations! Your Tamagotchi reach full maturity!")
-    } else if(age === 10 && barWidth1 < 70 && barWidth2 < 70 && barWidth3 > 30) {
-        alert("Oh no! Your Tamagotchi failed to reach full maturity and has died because of your gross neglicence.")
-    }
-}
